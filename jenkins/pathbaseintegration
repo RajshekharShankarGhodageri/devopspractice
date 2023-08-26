@@ -1,0 +1,5 @@
+built step
+execute shell  
+/devopspractice/jenkins/systemdetails.sh
+apply and save 
+next click on build now it will be integrated with linux terminal
