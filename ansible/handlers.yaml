@@ -1,6 +1,6 @@
 ---
 - name: To install Httpd on web servers
-  hosts: webservers
+  hosts: webserver
   become: true
   tasks:
   - name: install packages
