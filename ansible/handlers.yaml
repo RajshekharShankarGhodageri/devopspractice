@@ -8,7 +8,6 @@
       name: httpd
       state: installed
 
-
   - name: start apache
     service:
       name: httpd
