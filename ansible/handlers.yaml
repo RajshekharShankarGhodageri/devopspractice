@@ -1,0 +1,14 @@
+---
+- name: To install Httpd on web servers
+  hosts: webserver
+  become: true
+  tasks:
+  - name: install packages
+    yum: 
+      name: httpd
+      state: installed
+
+  - name: start apache
+    service:
+      name: httpd
+      state: started

@@ -1,0 +1,6 @@
+---
+- name: this playbook is to create a user
+  hosts: all
+  become: true
+  tasks: 
+  - user: name=microdregee
