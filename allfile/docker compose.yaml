@@ -1,0 +1,35 @@
+docker-compose install
+
+1.Copy the appropriate docker-compose binary from GitHub:
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+2.Fix permissions after download:
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+3.Verify success:
+docker-compose version
+
+4.NOTE: to get the latest version (thanks @spodnet)
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+5.Example to test
+
+version: '3.8'
+services:
+  app: 
+    image: nginx
+    ports:
+      - "80:80"
+
+  web: 
+    image: httpd
+    ports:
+      - "8081:80"
+      
+      
+      edit this yaml in the visual studio code
+      and modife as per the requirements scale up and scale down
+      
+      

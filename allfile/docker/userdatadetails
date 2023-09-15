@@ -1,0 +1,9 @@
+for running the docker swarm open the 2377 port
+
+
+#!/bin/bash
+sudo yum install docker -y
+sudo yum install git -y
+sudo systemctl enable docker
+sudo systemctl start docker
+hostname worker
