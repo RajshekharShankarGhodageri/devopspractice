@@ -1,0 +1,36 @@
+provider "aws" {
+  region = "us-east-1" 
+  access_key = "add here"
+  secret_key = "add here"
+}
+
+resource "aws_iam_user" "example" {
+  name = "example-user"
+
+  # policies = [
+  #   {
+  #     name        = "example-policy",
+  #     description = "An example inline policy",
+  #     policy      = <<-JSON
+  #       {
+  #         "Version": "2012-10-17",
+  #         "Statement": [
+  #           {
+  #             "Effect": "Allow",
+  #             "Action": "s3:ListBucket",
+  #             "Resource": "*"
+  #           }
+  #         ]
+  #       }
+  #     JSON
+  #   }
+  # ]
+}
+
+output "iam_user_arn" {
+  value = aws_iam_user.example.arn
+}
+
+output "iam_user_name" {
+  value = aws_iam_user.example.name
+}
